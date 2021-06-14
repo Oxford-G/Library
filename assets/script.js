@@ -62,3 +62,12 @@ function showBooks() {
     container.appendChild(content);
   }
 }
+
+function addBookToLibrary() {
+  const newBook = new Book(title.value, author.value, pages.value, read.checked);
+
+  library.push(newBook);
+
+  saveLibrary();
+  showBooks();
+}

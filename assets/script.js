@@ -30,3 +30,11 @@ function removeBook() {
   saveLibrary();
   showBooks(); // eslint-disable-line
 }
+
+function changeRead() {
+  const { id } = this.parentNode;
+  const para = this.parentNode.querySelector('p');
+  library[id].read = !library[id].read;
+  para.innerHTML = library[id].info();
+  saveLibrary();
+}

@@ -38,3 +38,27 @@ function changeRead() {
   para.innerHTML = library[id].info();
   saveLibrary();
 }
+
+
+function showBooks() {
+  container.innerHTML = '';
+  for (let i = 0; i < library.length; i += 1) {
+    const content = document.createElement('div');
+    content.setAttribute('id', i);
+    const text = document.createElement('p');
+    text.textContent = library[i].info();
+
+    const removeBtn = document.createElement('button');
+    removeBtn.addEventListener('click', removeBook);
+    removeBtn.textContent = 'Remove';
+
+    const changeReadBtn = document.createElement('button');
+    changeReadBtn.addEventListener('click', changeRead);
+    changeReadBtn.textContent = 'Readed?';
+
+    content.appendChild(text);
+    content.appendChild(changeReadBtn);
+    content.appendChild(removeBtn);
+    container.appendChild(content);
+  }
+}

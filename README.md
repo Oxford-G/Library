@@ -8,10 +8,6 @@ In this project we build a simple library app with js where you can:
 - Remove Books
 - Mark added books as read
 
-## Live Link
-[Live Link]( https://oxford-g.github.io/Library/index
-)
-
 ## Built With
 
 - Javascript

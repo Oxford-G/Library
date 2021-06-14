@@ -76,3 +76,16 @@ function showForm() {
   form.classList.toggle('hidden');
   button.classList.toggle('hidden');
 }
+
+function loadLibrary() {
+  const books = JSON.parse(localStorage.lib);
+  for (let i = 0; i < books.length; i += 1) {
+    Object.setPrototypeOf(books[i], Book.prototype);
+  }
+  return books;
+}
+
+if (localStorage.lib) {
+  library = loadLibrary();
+  showBooks();
+}

@@ -71,3 +71,8 @@ function addBookToLibrary() {
   saveLibrary();
   showBooks();
 }
+
+function showForm() {
+  form.classList.toggle('hidden');
+  button.classList.toggle('hidden');
+}

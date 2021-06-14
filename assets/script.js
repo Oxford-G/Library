@@ -23,3 +23,10 @@ Book.prototype.info = function () {
 function saveLibrary() {
   localStorage.lib = JSON.stringify(library);
 }
+
+function removeBook() {
+  const { id } = this.parentNode;
+  library.splice(id, 1);
+  saveLibrary();
+  showBooks(); // eslint-disable-line
+}

@@ -89,3 +89,7 @@ if (localStorage.lib) {
   library = loadLibrary();
   showBooks();
 }
+
+button.addEventListener('click', addBookToLibrary);
+
+newBookBtn.addEventListener('click', showForm);

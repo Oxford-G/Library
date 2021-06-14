@@ -39,7 +39,6 @@ function changeRead() {
   saveLibrary();
 }
 
-
 function showBooks() {
   container.innerHTML = '';
   for (let i = 0; i < library.length; i += 1) {

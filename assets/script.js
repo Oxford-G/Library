@@ -7,3 +7,19 @@ const button = document.querySelector('#btn');
 const read = document.querySelector('#read');
 const form = document.querySelector('form');
 const newBookBtn = document.querySelector('#form');
+
+function Book(title, author, pages, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
+}
+
+Book.prototype.info = function () {
+  const alreadyRead = (this.read) ? 'already read' : 'not read yet';
+  return `${this.title} by ${this.author}, ${this.pages} pages, ${alreadyRead}`;
+};
+
+function saveLibrary() {
+  localStorage.lib = JSON.stringify(library);
+}

@@ -20,6 +20,7 @@ To set up a local copy of the project
 
 - `git clone git@github.com:Oxford-G/Library.git`
 - `cd Library`
+- `open the app on your browser`
 
 
 ## Author
